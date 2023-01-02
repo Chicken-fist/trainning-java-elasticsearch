@@ -8,7 +8,7 @@ import com.google.protobuf.util.JsonFormat;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
+//Anh Nhan Do This
 public class ProtoEntityMapper {
 
     private static ObjectMapper mapper = new ObjectMapper();

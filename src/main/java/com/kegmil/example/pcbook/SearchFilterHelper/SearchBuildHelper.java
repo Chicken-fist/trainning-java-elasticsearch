@@ -5,7 +5,7 @@ import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.MatchQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
-
+//Anh Nhan Do This
 public class SearchBuildHelper {
     public static QueryBuilder buildQueryBuilder(Filter filter) {
         BoolQueryBuilder context = QueryBuilders.boolQuery();

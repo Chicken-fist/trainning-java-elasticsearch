@@ -23,7 +23,7 @@ message SearchLaptopRequest {
 message SearchLaptopResponse {
   Laptop laptop = 1;
 }
-
+//Anh Nhan Do this
 service LaptopService {
   rpc createLaptop(CreateLaptopRequest) returns (CreateLaptopResponse) {};
   rpc searchLaptop(SearchLaptopRequest) returns (stream SearchLaptopResponse) {};

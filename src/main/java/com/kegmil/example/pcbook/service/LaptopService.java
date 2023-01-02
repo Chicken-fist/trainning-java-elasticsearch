@@ -81,8 +81,9 @@ public class LaptopService extends LaptopServiceGrpc.LaptopServiceImplBase {
 
     public void syncDataToElasticSearch(Laptop laptop) {
         //do something here ? option :)
+        //Anh Nhan Support
         String itemPushToElasticSearch = JsonHelper.mapLaptopProtoToJson(laptop);
-        laptop.toBuilder().setStorages(0, Storage.newBuilder().setMemory(Memory.newBuilder().setUnit(Memory.Unit.BIT).build()).build());
+        laptop.toBuilder().setStorages(0, Storage.newBuilder().build());
         javaElasticSearch.pushData("laptopelasticsearch", itemPushToElasticSearch);
     }
 
@@ -115,6 +116,7 @@ public class LaptopService extends LaptopServiceGrpc.LaptopServiceImplBase {
         searchResult.getHits().forEach(laptop -> {
 //            System.out.println(laptop);
             try {
+                //Anh Nhan Support
                 Laptop laptopProto = ProtoEntityMapper.toProto(laptop, Laptop.newBuilder()).build();
                 SearchLaptopResponse response = SearchLaptopResponse.newBuilder().setLaptop(laptopProto).build();
                 responseObserver.onNext(response);

@@ -4,7 +4,7 @@ import org.elasticsearch.common.document.DocumentField;
 
 import java.util.List;
 import java.util.Map;
-
+//Anh Nhan Do This
 public class SearchResult<T> {
     private List<T> hits;
     private Map<String, Map<String, DocumentField>> scriptFields;
